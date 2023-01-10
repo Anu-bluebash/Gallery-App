@@ -1,0 +1,38 @@
+
+
+<%= form_with model: @album do |form| %>
+  <div class="text-center"> <h3>Album Form </h3></div>
+  <div>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %>
+  </div><br>
+
+  <div>
+  <%= form.label :description %><br>
+  <%= form.text_area :description %>
+  </div><br>
+
+  <div>
+  <%= form.label :CoverImage %><br>
+  <%= form.file_field :cover_image %><br>
+  </div><br>
+  
+  <div>
+  <%= form.label :Media %><br>
+  <%= form.file_field :media, multiple:true %><br>
+  </div><br>
+
+  <div>
+  <%= form.label :Published %><br>
+  <%= form.check_box :published %><br>
+  </div><br>
+
+  <div>
+  <%= form.label :Tags %><br>
+  <%= form.text_field :tag_list %><br>
+  </div><br>
+
+  <div>
+  <%= form.submit %>
+  </div><br>
+  <% end %>

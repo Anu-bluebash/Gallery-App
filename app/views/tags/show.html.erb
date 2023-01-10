@@ -1,0 +1,7 @@
+<h1>Albums Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.albums.each do |album| %>
+    <li><%= link_to album.title, album_path(album) %></li>
+  <% end %>
+</ul>
